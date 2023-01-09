@@ -1,0 +1,132 @@
+<script src="script/restaurant.js" type="text/javascript"></script>
+<script type="text/javascript">
+</script>
+<div class="container-fluid">
+	<div class="modal fade" id="error" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Erreur</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Impossible de supprimer cette restaurant</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card bg-white">
+		<div class="card-header card-color">
+			<p class="h2 text-center text-uppercase font-weight-bold pt-2">Gestion
+				des restaurants</p>
+		</div>
+
+
+		<div class="card-body container-fluid">
+			<div class="row">
+				<div class="col-sm-6 mb-2">
+					<label for="nom">nom : </label> <input class="" type="text" id="id"
+						hidden> <input class="form-control" type="text" id="nom"
+						required>
+				</div>
+				<div class="col-sm-6 mb-2">
+					<label for="adresse">adresse : </label> <input class="form-control"
+						type="text" id="adresse" required>
+				</div>
+				<div class="col-sm-6 mb-2">
+					<label for="lat">latitude : </label> <input class="form-control"
+						type="number" id="lat" step="0.01" required>
+				</div>
+
+				<div class="col-sm-6 mb-2">
+					<label for="longs">longitude : </label> <input class="form-control"
+						type="number" id="longs" step="0.01" required>
+				</div>
+				<div class="col-sm-6 mb-2">
+					<label for="rank">rank : </label> <input class="form-control"
+						type="number" id="rank" required>
+				</div>
+				<div class="col-sm-6 mb-2">
+					<label for="heure_op">heure d ouverture : </label> <input class=""
+						type="time" id="id" hidden> <input class="form-control"
+						type="time" id="heure_op" required>
+				</div>
+				<div class="col-sm-6 mb-2">
+					<label for="heure_cl">heure de fermeture : </label> <input class=""
+						type="time" id="id" hidden> <input class="form-control"
+						type="time" id="heure_cl" required>
+				</div>
+				<div class="col-sm-6 mb-2">
+                    <label for="url">photo : </label>
+                    <input class="" type="text" id="id" hidden>
+                    <input class="form-control" type="file" id="url" required>
+                </div>
+				<div class="col-sm-6 mb-2">
+					<label for="week">Week-end ? </label> <select class="form-control"
+						id="week" required>					
+						<option value="true">Ouvert</option>
+						<option value="false">Fermé</option>
+					</select>
+				</div>
+				
+			</div>
+
+
+			<div class="row">
+
+				<div class="col-sm-6 mb-2">
+					<label for="serie">Serie : </label> <select class="form-control"
+						id="serie" name="serie">
+						<option value="0">choisir une option</option>
+
+					</select>
+				</div>
+				<div class="col-sm-6 mb-2">
+					<label for="zone">Zone : </label> <select class="form-control"
+						id="zone" name="zone">
+						<option value="0">choisir une option</option>
+
+					</select>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<button type="button" class="btn btn-outline-success mt-3 mb-3"
+						id="btn">Ajouter</button>
+				</div>
+			</div>
+			<div class="row table-responsive m-auto rounded">
+				<table id="trestaurant" class="table table-hover w-100">
+					<thead>
+
+						<tr class="text-uppercase bg-light  w-100">
+							<th scope="col">Id</th>
+							<th scope="col">nom</th>
+							<th scope="col">adresse</th>
+							<th scope="col">latitude</th>
+							<th scope="col">longitude</th>
+							<th scope="col">rank</th>
+							<th scope="col">heure_op</th>
+							<th scope="col">heure_cl</th>
+							<th scope="col">week</th>
+							<th scope="col">photo</th>
+							<th scope="col">serie</th>
+							<th scope="col">zone</th>
+							<th scope="col">Supprimer</th>
+							<th scope="col">Modifier</th>
+						</tr>
+					</thead>
+					<tbody id="table-content">
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+</div>
